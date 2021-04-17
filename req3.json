@@ -1,0 +1,32 @@
+{
+    "requirement": [
+        {
+            "sensorClass": "samsung_temp_S41",
+            "location": "r13"
+        }
+    ],
+    "controller": [
+        {
+            "controllerClass": "samsung_controller",
+            "location": "r11"
+        },
+        {
+            "controllerClass": "Hitache_fridge_controller",
+            "location": "r12"
+        },
+        {
+            "controllerClass": "Ac_controller",
+            "location": "r11"
+        }
+    ],
+    "notification": [
+        {
+            "notificationClass": "outlook_notification",
+            "location": "r12"
+        },
+        {
+            "notificationClass": "gmail_notification",
+            "location": "r11"
+        }
+    ]
+}

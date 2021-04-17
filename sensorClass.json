@@ -1,0 +1,68 @@
+{
+    "sensorClass": "samsung_temp_S41",
+    "description": "sensor for generating temperature and controlling it",
+    "dataRate": 5,
+    "fields": [
+        {
+            "currentTemp": {
+                "value_type": "int",
+                "min": 0,
+                "max": 50
+            }
+        },
+        {
+            "ACTemp": {
+                "value_type": "int",
+                "min": 0,
+                "max": 50
+            }
+        },
+        {
+            "ACState": {
+                "value_type": "bool",
+                "min": "off",
+                "max": "on"
+            }
+        }
+    ],
+    "functions": [
+        {
+            "getCurrentTemp()": [
+                {
+                    "input": "-"
+                },
+                {
+                    "output": "int"
+                }
+            ]
+        },
+        {
+            "getACTemp()": [
+                {
+                    "input": "-"
+                },
+                {
+                    "output": "int"
+                }
+            ]
+        },
+        {
+            "getACState()": {
+                "input": "-",
+                "output": "bool"
+            }
+        },
+        {
+            "setACState()": {
+                "input": "newValue",
+                "output": "True-false"
+            }
+        },
+        {
+            "setACTemp()": {
+                "input": "newValue",
+                "output": "int"
+            }
+        }
+    ]
+}

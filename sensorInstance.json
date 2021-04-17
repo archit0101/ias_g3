@@ -1,0 +1,53 @@
+{
+    "instances": [
+        {
+            "sensorClass": "samsung_temp_S41",
+            "sensorId": "S111",
+            "location": "r11",
+            "ip": "127.0.0.1",
+            "port": "8081"
+        },
+        {
+            "sensorClass": "samsung_temp_S41",
+            "sensorId": "S112",
+            "location": "r12",
+            "ip": "127.0.0.1",
+            "port": "8082"
+        },
+        {
+            "sensorClass": "samsung_temp_S41",
+            "sensorId": "S113",
+            "location": "r13",
+            "ip": "127.0.0.1",
+            "port": "8083"
+        },
+        {
+            "sensorClass": "samsung_temp_S41",
+            "sensorId": "S114",
+            "location": "r14",
+            "ip": "127.0.0.1",
+            "port": "8084"
+        },
+        {
+            "sensorClass": "samsuuungggg",
+            "sensorId": "S112",
+            "location": "r12",
+            "ip": "127.0.0.1",
+            "port": "8082"
+        },
+        {
+            "sensorClass": "samsung_temp_S41",
+            "sensorId": "S113",
+            "location": "r13",
+            "ip": "127.0.0.1",
+            "port": "8083"
+        },
+        {
+            "sensorClass": "HitachiClass",
+            "sensorId": "S114",
+            "location": "r14",
+            "ip": "127.0.0.1",
+            "port": "8084"
+        }
+    ]
+}
