@@ -1,0 +1,115 @@
+<html>
+
+   <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Welcome To IOT Platform</title>
+      <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+      <link rel="stylesheet" href="style.css"/>
+      <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/style.css') }}">
+   </head>
+
+   <body>
+    <form action = "http://localhost:5000/user" method = "post" enctype="multipart/form-data">
+         <div class=w3-center id="a1"><h1>Welcome to IOT Platform</h1></div>
+         <br> <br>
+         {% with messages = get_flashed_messages() %}
+         {% if messages %}
+            <ul>
+               <li id="a2">{{ messages }}</li>
+            </ul>
+         {% endif %}
+         {% endwith %}
+        <div>
+            <h3 id="a2" class="w3-center">User Dashboard</h3>
+        </div>
+        <br> <br>
+         
+        <div>
+            <table id="a4" class="center">
+                <tr id="a3">
+                    <td>
+                        {{ form.application_option.label }}
+                    </td>
+                    <td>
+                        {{ form.application_option }}
+                    </td>
+                </tr>
+
+                <tr id="a3">
+                    <td>
+                        Upload Sensor Requirement file -->
+                    </td>
+                    <td>
+                        <input type="file" id="myfile1" name="myfile1" onchange="return fileValidation()">
+                    </td>
+                </tr>
+
+                <tr id="a3">
+                    <td>
+                        Upload schedule information file-->
+                    </td>
+                    <td>
+                        <input type="file" id="myfile2" name="myfile2" onchange="return fileValidation()">
+                    </td>
+                </tr>
+
+            </table> 
+         </div>
+         <br>
+         <br>
+         <div>
+            <p class="w3-mobile w3-center">
+                <input type="submit" name="submit" value="Submit"
+                    class="w3-button w3-light-yellow w3-padding-large"
+                    style="background-color: #eec65f; left:50%; position: absolute; color: black;">
+                
+              </p>
+         </div>
+         <br>
+         <div id="a2">
+            <br><br><br><br><br>
+            <h4 style="left:80%; position: absolute; ">
+               Developed By:-
+               <br>
+               Group 3
+            </h4>
+            
+         </div>
+         
+      </form>
+   </body>
+</html>
+
+<script>
+   function fileValidation()
+   {
+        var k=document.getElementById("admin_option")
+        var value=k.options[k.selectedIndex].value;
+        //alert (value); // This will output the value selected
+        var files=document.getElementById("myfile")
+        var filename=files.value
+        //alert(filename)
+        if(value == "Upload The Application")
+        {
+            var allowedExtensions = /(\.zip)$/i;        
+            if (!allowedExtensions.exec(filename)) {
+                alert('Invalid file type');
+                files.value = '';
+                return false;
+            } 
+        }
+        else{
+            var allowedExtensions = /(\.json)$/i;        
+            if (!allowedExtensions.exec(filename)) {
+                alert('Invalid file type');
+                files.value = '';
+                return false;
+            } 
+        }
+        
+   }
+
+   
+</script>
